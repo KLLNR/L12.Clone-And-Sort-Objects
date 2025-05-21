@@ -40,6 +40,16 @@
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnClone = new System.Windows.Forms.Button();
             this.btnSort = new System.Windows.Forms.Button();
+            this.txtInput = new System.Windows.Forms.TextBox();
+            this.txtIndex = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnShowGeneric = new System.Windows.Forms.Button();
+            this.btnShowNonGeneric = new System.Windows.Forms.Button();
+            this.btnGetGenericAt = new System.Windows.Forms.Button();
+            this.lstGeneric = new System.Windows.Forms.ListBox();
+            this.lstNonGeneric = new System.Windows.Forms.ListBox();
+            this.btnGetNonGenericAt = new System.Windows.Forms.Button();
+            this.lblResult = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtComplexInput
@@ -149,11 +159,112 @@
             this.btnSort.UseVisualStyleBackColor = true;
             this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
+            // txtInput
+            // 
+            this.txtInput.Location = new System.Drawing.Point(91, 371);
+            this.txtInput.Name = "txtInput";
+            this.txtInput.Size = new System.Drawing.Size(181, 22);
+            this.txtInput.TabIndex = 12;
+            // 
+            // txtIndex
+            // 
+            this.txtIndex.Location = new System.Drawing.Point(92, 414);
+            this.txtIndex.Name = "txtIndex";
+            this.txtIndex.Size = new System.Drawing.Size(181, 22);
+            this.txtIndex.TabIndex = 13;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(92, 459);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(156, 23);
+            this.btnAdd.TabIndex = 14;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnShowGeneric
+            // 
+            this.btnShowGeneric.Location = new System.Drawing.Point(833, 487);
+            this.btnShowGeneric.Name = "btnShowGeneric";
+            this.btnShowGeneric.Size = new System.Drawing.Size(188, 23);
+            this.btnShowGeneric.TabIndex = 15;
+            this.btnShowGeneric.Text = "Show Generic";
+            this.btnShowGeneric.UseVisualStyleBackColor = true;
+            this.btnShowGeneric.Click += new System.EventHandler(this.btnShowGeneric_Click);
+            // 
+            // btnShowNonGeneric
+            // 
+            this.btnShowNonGeneric.Location = new System.Drawing.Point(378, 496);
+            this.btnShowNonGeneric.Name = "btnShowNonGeneric";
+            this.btnShowNonGeneric.Size = new System.Drawing.Size(188, 23);
+            this.btnShowNonGeneric.TabIndex = 16;
+            this.btnShowNonGeneric.Text = "Show Non Generic ";
+            this.btnShowNonGeneric.UseVisualStyleBackColor = true;
+            this.btnShowNonGeneric.Click += new System.EventHandler(this.btnShowNonGeneric_Click);
+            // 
+            // btnGetGenericAt
+            // 
+            this.btnGetGenericAt.Location = new System.Drawing.Point(833, 516);
+            this.btnGetGenericAt.Name = "btnGetGenericAt";
+            this.btnGetGenericAt.Size = new System.Drawing.Size(188, 23);
+            this.btnGetGenericAt.TabIndex = 17;
+            this.btnGetGenericAt.Text = "Show Generic At";
+            this.btnGetGenericAt.UseVisualStyleBackColor = true;
+            this.btnGetGenericAt.Click += new System.EventHandler(this.btnGetGenericAt_Click);
+            // 
+            // lstGeneric
+            // 
+            this.lstGeneric.FormattingEnabled = true;
+            this.lstGeneric.ItemHeight = 16;
+            this.lstGeneric.Location = new System.Drawing.Point(378, 371);
+            this.lstGeneric.Name = "lstGeneric";
+            this.lstGeneric.Size = new System.Drawing.Size(382, 100);
+            this.lstGeneric.TabIndex = 18;
+            // 
+            // lstNonGeneric
+            // 
+            this.lstNonGeneric.FormattingEnabled = true;
+            this.lstNonGeneric.ItemHeight = 16;
+            this.lstNonGeneric.Location = new System.Drawing.Point(833, 371);
+            this.lstNonGeneric.Name = "lstNonGeneric";
+            this.lstNonGeneric.Size = new System.Drawing.Size(382, 100);
+            this.lstNonGeneric.TabIndex = 19;
+            // 
+            // btnGetNonGenericAt
+            // 
+            this.btnGetNonGenericAt.Location = new System.Drawing.Point(378, 525);
+            this.btnGetNonGenericAt.Name = "btnGetNonGenericAt";
+            this.btnGetNonGenericAt.Size = new System.Drawing.Size(188, 23);
+            this.btnGetNonGenericAt.TabIndex = 20;
+            this.btnGetNonGenericAt.Text = "Show Non Generic At";
+            this.btnGetNonGenericAt.UseVisualStyleBackColor = true;
+            this.btnGetNonGenericAt.Click += new System.EventHandler(this.btnGetNonGenericAt_Click);
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(92, 524);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(39, 16);
+            this.lblResult.TabIndex = 21;
+            this.lblResult.Text = "result";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1468, 361);
+            this.ClientSize = new System.Drawing.Size(1468, 649);
+            this.Controls.Add(this.lblResult);
+            this.Controls.Add(this.btnGetNonGenericAt);
+            this.Controls.Add(this.lstNonGeneric);
+            this.Controls.Add(this.lstGeneric);
+            this.Controls.Add(this.btnGetGenericAt);
+            this.Controls.Add(this.btnShowNonGeneric);
+            this.Controls.Add(this.btnShowGeneric);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.txtIndex);
+            this.Controls.Add(this.txtInput);
             this.Controls.Add(this.btnSort);
             this.Controls.Add(this.btnClone);
             this.Controls.Add(this.btnLoad);
@@ -187,5 +298,15 @@
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnClone;
         private System.Windows.Forms.Button btnSort;
+        private System.Windows.Forms.TextBox txtInput;
+        private System.Windows.Forms.TextBox txtIndex;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnShowGeneric;
+        private System.Windows.Forms.Button btnShowNonGeneric;
+        private System.Windows.Forms.Button btnGetGenericAt;
+        private System.Windows.Forms.ListBox lstGeneric;
+        private System.Windows.Forms.ListBox lstNonGeneric;
+        private System.Windows.Forms.Button btnGetNonGenericAt;
+        private System.Windows.Forms.Label lblResult;
     }
 }

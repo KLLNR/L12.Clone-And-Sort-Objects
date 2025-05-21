@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComplexCollection.cs" />
     <Compile Include="ComplexNumber.cs" />
     <Compile Include="IStringOperations.cs" />
     <Compile Include="MainForm.cs">

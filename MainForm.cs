@@ -87,5 +87,50 @@ namespace L12_OOP_12.Forms
             foreach (var item in stringArray)
                 listBoxSorted.Items.Add(item);
         }
+
+        private ComplexCollection complexCollection = new ComplexCollection();
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            string input = txtInput.Text.Trim();
+            ComplexNumber cn = new ComplexNumber(input);
+            complexCollection.AddComplexNumber(cn);
+            MessageBox.Show("Додано");
+        }
+
+        private void btnShowGeneric_Click(object sender, EventArgs e)
+        {
+            lstGeneric.Items.Clear();
+            foreach (string s in complexCollection.TraverseGeneric())
+            {
+                lstGeneric.Items.Add(s);
+            }
+        }
+
+        private void btnShowNonGeneric_Click(object sender, EventArgs e)
+        {
+            lstNonGeneric.Items.Clear();
+            foreach (string s in complexCollection.TraverseNonGeneric())
+            {
+                lstNonGeneric.Items.Add(s);
+            }
+        }
+
+        private void btnGetGenericAt_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtIndex.Text, out int index))
+            {
+                lblResult.Text = complexCollection.GetGenericElementAt(index);
+            }
+        }
+
+        private void btnGetNonGenericAt_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtIndex.Text, out int index))
+            {
+                lblResult.Text = complexCollection.GetNonGenericElementAt(index);
+            }
+        }
+
     }
 }
